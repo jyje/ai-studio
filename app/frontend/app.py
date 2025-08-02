@@ -53,7 +53,7 @@ def create_fastui_app() -> List[AnyComponent]:
                                 )
                             ],
                             on_click=GoToEvent(url="/developer"),
-                            class_name="btn btn-primary btn-lg p-4 m-2 text-decoration-none w-100",
+                            class_name="btn btn-warning btn-lg p-4 m-2 text-decoration-none w-100",
                         ),
                         Link(
                             components=[
