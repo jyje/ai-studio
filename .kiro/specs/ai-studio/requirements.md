@@ -2,7 +2,7 @@
 
 ## Introduction
 
-이 문서는 FastUI와 Plotly를 통합한 RAG(Retrieval-Augmented Generation)와 MCP(Model Context Protocol) 대화형 AI 스튜디오의 요구사항을 정의합니다. 이 스튜디오는 uv로 패키지를 관리하고, Typer를 사용한 CLI 인터페이스(`uv run studio --help`, `uv run studio run`)를 통해 FastUI 기반 웹 인터페이스를 제공합니다. 모든 UI 객체와 리소스는 FastUI에서 관리하며, 그래픽과 사용자 상호작용을 위해 Plotly를 사용합니다. 시스템은 AI 개발자, AI 평가자, AI 사용자의 세 가지 사용자 역할에 맞춘 차별화된 인터페이스를 제공합니다.
+이 문서는 FastUI와 Plotly를 통합한 RAG(Retrieval-Augmented Generation)와 MCP(Model Context Protocol) 대화형 AI 스튜디오의 요구사항을 정의합니다. 이 스튜디오는 uv로 패키지를 관리하고, Typer를 사용한 CLI 인터페이스(`uv run ais --help`, `uv run ais run`)를 통해 FastUI 기반 웹 인터페이스를 제공합니다. 모든 UI 객체와 리소스는 FastUI에서 관리하며, 그래픽과 사용자 상호작용을 위해 Plotly를 사용합니다. 시스템은 AI 개발자, AI 평가자, AI 사용자의 세 가지 사용자 역할에 맞춘 차별화된 인터페이스를 제공합니다.
 
 ## Requirements
 
@@ -89,11 +89,11 @@
 
 #### Acceptance Criteria
 
-1. WHEN a user runs `uv run studio --help` THEN the system SHALL display available commands and options
-2. WHEN a user runs `uv run studio run` THEN the system SHALL start the web-based FastUI interface with embedded Plotly components using `studio/main.py` as the single entry point
+1. WHEN a user runs `uv run ais --help` THEN the system SHALL display available commands and options
+2. WHEN a user runs `uv run ais run` THEN the system SHALL start the web-based FastUI interface with embedded Plotly components using `studio/main.py` as the single entry point
 3. WHEN the web interface starts THEN the system SHALL provide a local server URL for browser access to the FastUI application
 4. WHEN the user stops the application THEN the system SHALL gracefully shut down all services
-5. WHEN the user runs `uv run studio` THEN the system SHALL display simple information about the application
+5. WHEN the user runs `uv run ais` THEN the system SHALL display simple information about the application
 6. WHEN the system is structured THEN the system SHALL use `studio/main.py` as the only main entry point and SHALL NOT create any other `main.py` files in any subdirectories or modules
 
 ### Requirement 9

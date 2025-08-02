@@ -5,7 +5,7 @@
 
 ### ❌ 절대 사용 금지
 ```bash
-python -m studio.cli.main
+python -m app.cli.main
 python -m pytest
 python script.py
 python -c "import ..."
@@ -15,8 +15,8 @@ pip install ...
 ### ✅ 올바른 사용법
 ```bash
 # CLI 실행
-uv run studio --help
-uv run studio run
+uv run ais --help
+uv run ais run
 
 # 테스트 실행
 uv run pytest
@@ -39,13 +39,13 @@ uv add --dev pytest
 ### 애플리케이션 실행
 ```bash
 # 웹 인터페이스 시작
-uv run studio run
+uv run ais run
 
 # CLI 도움말
-uv run studio --help
+uv run ais --help
 
 # 특정 명령어 실행
-uv run studio <command>
+uv run ais <command>
 ```
 
 ### 개발 및 테스트
@@ -85,10 +85,10 @@ uv lock --upgrade
 ## 디버깅 및 개발
 ```bash
 # 개발 서버 실행 (디버그 모드)
-uv run studio run --debug
+uv run ais run --debug
 
 # 환경 변수와 함께 실행
-UV_ENV_FILE=.env.local uv run studio run
+UV_ENV_FILE=.env.local uv run ais run
 
 # 특정 Python 버전 사용
 uv run --python 3.12 studio run

@@ -39,16 +39,16 @@ uv sync --group dev
 
 ```bash
 # 웹 인터페이스 시작
-uv run studio run
+uv run ais run
 
 # CLI 도움말
-uv run studio --help
+uv run ais --help
 
 # 시스템 상태 확인
-uv run studio health
+uv run ais health
 
 # 설정 관리
-uv run studio config --show
+uv run ais config --show
 ```
 
 ## 개발 상태

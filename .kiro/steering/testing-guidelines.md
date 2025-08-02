@@ -224,13 +224,13 @@ uv run pytest -m asyncio
 uv run pytest -m "not performance"
 
 # 개발 서버 실행
-uv run studio run
+uv run ais run
 
 # CLI 도움말 확인
-uv run studio --help
+uv run ais --help
 
 # 특정 모듈 실행 (절대 python -m 사용 금지)
-uv run -m studio.cli.main
+uv run -m app.cli.main
 ```
 
 ## 중요한 명령어 사용 규칙

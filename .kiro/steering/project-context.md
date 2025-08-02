@@ -39,14 +39,14 @@ ai-studio/
 3. **AI 사용자**: 단순한 프롬프트 인터페이스
 
 ## CLI 사용법
-- `uv run studio --help`: 도움말 표시
-- `uv run studio run`: 웹 인터페이스 시작
+- `uv run ais --help`: 도움말 표시
+- `uv run ais run`: 웹 인터페이스 시작
 - `studio --help`: 설치된 경우 직접 실행
 - `studio run`: 설치된 경우 웹 인터페이스 시작
 
 ## 개발 및 테스트 명령어
 - `uv run pytest`: 테스트 실행
-- `uv run studio`: CLI 명령어 실행
+- `uv run ais`: CLI 명령어 실행
 - `uv add <package>`: 의존성 추가
 - `uv remove <package>`: 의존성 제거
 - **주의**: `python -m ...` 명령어 사용 금지, 항상 `uv run` 또는 `studio` 사용

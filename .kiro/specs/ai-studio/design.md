@@ -86,9 +86,9 @@ graph TB
 **Purpose**: 애플리케이션 진입점 및 관리 인터페이스
 
 **Key Components**:
-- `studio.main`: 유일한 메인 진입점 (다른 main.py 파일 금지)
-- `studio.cli.commands`: 서브커맨드 구현
-- `studio.cli.config`: 설정 관리
+- `app.main`: 유일한 메인 진입점 (다른 main.py 파일 금지)
+- `app.cli.commands`: 서브커맨드 구현
+- `app.cli.config`: 설정 관리
 
 **Interface**:
 ```python
@@ -113,10 +113,10 @@ def config(
 **Purpose**: FastAPI 기반 서버에서 FastUI 컴포넌트와 Plotly 그래프를 통합 제공
 
 **Key Components**:
-- `studio.server.app`: FastAPI 서버 애플리케이션 (main.py 사용 금지)
-- `studio.server.fastapi_app`: FastAPI 애플리케이션 인스턴스
-- `studio.frontend.fastui_app`: FastUI 페이지 및 컴포넌트
-- `studio.frontend.plotly_integration`: Plotly-FastUI 통합 로직
+- `app.server.app`: FastAPI 서버 애플리케이션 (main.py 사용 금지)
+- `app.server.fastapi_app`: FastAPI 애플리케이션 인스턴스
+- `app.frontend.fastui_app`: FastUI 페이지 및 컴포넌트
+- `app.frontend.plotly_integration`: Plotly-FastUI 통합 로직
 
 **Server Integration**:
 ```python
@@ -176,10 +176,10 @@ def create_app() -> FastAPI:
 **Purpose**: RESTful API 엔드포인트 및 비동기 서비스 제공
 
 **Key Components**:
-- `studio.api.routes`: API 라우트 정의
-- `studio.api.models`: Pydantic 모델
-- `studio.api.dependencies`: 의존성 주입
-- `studio.api.middleware`: 미들웨어 설정
+- `app.api.routes`: API 라우트 정의
+- `app.api.models`: Pydantic 모델
+- `app.api.dependencies`: 의존성 주입
+- `app.api.middleware`: 미들웨어 설정
 
 **API Routes**:
 ```python
@@ -212,10 +212,10 @@ async def test_models(request: ModelTestRequest) -> ModelComparison:
 **Purpose**: 역할별 차별화된 웹 인터페이스를 FastUI 컴포넌트로 제공
 
 **Key Components**:
-- `studio.frontend.app`: FastUI 애플리케이션 메인
-- `studio.frontend.pages`: 역할별 페이지 라우트
-- `studio.frontend.components`: 재사용 가능한 FastUI 컴포넌트
-- `studio.frontend.plotly_components`: Plotly 통합 컴포넌트
+- `app.frontend.app`: FastUI 애플리케이션 메인
+- `app.frontend.pages`: 역할별 페이지 라우트
+- `app.frontend.components`: 재사용 가능한 FastUI 컴포넌트
+- `app.frontend.plotly_components`: Plotly 통합 컴포넌트
 
 **FastUI-API Integration**:
 ```python
@@ -312,10 +312,10 @@ async def user_page() -> list[AnyComponent]:
 **Purpose**: 검색 증강 생성 기능 제공
 
 **Key Components**:
-- `studio.rag.engine`: RAG 엔진 메인 클래스
-- `studio.rag.retriever`: 문서 검색 로직
-- `studio.rag.embeddings`: 임베딩 모델 관리
-- `studio.rag.vector_stores`: 벡터 스토어 관리
+- `app.rag.engine`: RAG 엔진 메인 클래스
+- `app.rag.retriever`: 문서 검색 로직
+- `app.rag.embeddings`: 임베딩 모델 관리
+- `app.rag.vector_stores`: 벡터 스토어 관리
 
 **Interface**:
 ```python
@@ -343,9 +343,9 @@ class RAGEngine:
 **Purpose**: Model Context Protocol 도구 통합
 
 **Key Components**:
-- `studio.mcp.client`: MCP 클라이언트
-- `studio.mcp.tools`: 도구 관리
-- `studio.mcp.execution`: 실행 추적
+- `app.mcp.client`: MCP 클라이언트
+- `app.mcp.tools`: 도구 관리
+- `app.mcp.execution`: 실행 추적
 
 **Interface**:
 ```python
@@ -373,9 +373,9 @@ class MCPClient:
 **Purpose**: Plotly 그래프를 FastUI 컴포넌트 내에 임베드하고 상호작용 관리
 
 **Key Components**:
-- `studio.frontend.plotly_components`: Plotly 통합 컴포넌트
-- `studio.frontend.chart_factory`: 차트 생성 팩토리
-- `studio.frontend.interactive_handlers`: Plotly 이벤트 핸들러
+- `app.frontend.plotly_components`: Plotly 통합 컴포넌트
+- `app.frontend.chart_factory`: 차트 생성 팩토리
+- `app.frontend.interactive_handlers`: Plotly 이벤트 핸들러
 
 **Plotly Integration**:
 ```python
@@ -440,9 +440,9 @@ class ChartFactory:
 **Purpose**: 다중 언어 모델 및 임베딩 모델 관리
 
 **Key Components**:
-- `studio.models.manager`: 모델 관리자
-- `studio.models.llm`: 언어 모델 래퍼
-- `studio.models.embeddings`: 임베딩 모델 래퍼
+- `app.models.manager`: 모델 관리자
+- `app.models.llm`: 언어 모델 래퍼
+- `app.models.embeddings`: 임베딩 모델 래퍼
 
 **Interface**:
 ```python
