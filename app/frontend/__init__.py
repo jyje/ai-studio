@@ -1,0 +1,1 @@
+"""Frontend components and FastUI integration"""
